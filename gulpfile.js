@@ -5,7 +5,7 @@ var gulpWatch = require('gulp-watch');
 gulp.task('serve', ['browser-sync'], function(){
   gulpWatch('./css/*').on('change', browserSync.reload);
   gulpWatch('./js/**/*').on('change', browserSync.reload);
-  gulpWatch('./html/*').on('change', browserSync.reload);
+  gulpWatch('./html/**/*').on('change', browserSync.reload);
 });
 
 gulp.task('browser-sync', function(){

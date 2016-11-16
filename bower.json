@@ -12,7 +12,9 @@
     "test",
     "tests"
   ],
-  "devDependencies": {
+  "dependencies": {
+    "angular-route": "^1.5.8",
+    "angular-ui-router": "ui-router#^0.3.2",
     "angular": "angularjs#^1.5.8",
     "jQuery": "^3.1.1"
   }
