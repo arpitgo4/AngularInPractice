@@ -1,3 +1,22 @@
 <div>
   <p> DashBoard </p>
+
+  <div>
+    <p>Add Users: </p>
+    <input type='text' placeholder='name' ng-model='user.name' />
+    <input type='button' value='Add' ng-click='addUser(user.name)' />
+  </div>
+
+  <div>
+    <p>Remove Users:</p>
+    <table class='table'>
+      <th>User's Name</th>
+      <th>Operation</th>
+      <tr ng-repeat="user in userList" ng-class="$odd ? 'table-row odd' : 'table-row even'">
+        <td>{{user.name}}</td>
+        <td class="delete" ng-click="deleteUser(user)">[X]</td>
+      </tr>
+    </table>
+  </div>
+
 </div>

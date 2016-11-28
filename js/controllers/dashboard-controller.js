@@ -1,8 +1,25 @@
 
-app.controller('dashboardController', ['$scope', '$location', function($scope, $location){
+app.controller('dashboardController', ['$scope', function($scope){
+
+  let users = [{name: 'Arpit'}, {name: 'Akash'}, {name: 'Ankur'}, {name: 'Ujjwal'}];
+
+  $scope.deleteUser = (user) => {
+    for(let index in users){
+      if(user === users[index])
+        users.splice(index, 1);
+    }
+  };
+
+  $scope.addUser = (name) => {
+    if(name == '' || name == undefined) return;
+    users.push({name: name});
+    $scope.user.name = '';
+  };
 
   $scope.init = function(){
-    console.log('DashboardController loaded!');
+    $scope.userList = users;
   };
+
+  $scope.init();
 
 }]);

@@ -16,6 +16,8 @@
     "angular-route": "^1.5.8",
     "angular-ui-router": "ui-router#^0.3.2",
     "angular": "angularjs#^1.5.8",
-    "jQuery": "^3.1.1"
-  }
+    "jQuery": "^3.1.1",
+    "angular-animate": "^1.5.9"
+  },
+  "devDependencies": {}
 }
